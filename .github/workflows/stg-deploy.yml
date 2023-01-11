@@ -1,0 +1,17 @@
+name: MyAction
+on:
+  push:
+    branches:
+      - develop #here we choose to deploy only when a push is detected on the develop branch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Build static site
+        run: node dist/index.js npm install && npm run generate

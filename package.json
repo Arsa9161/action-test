@@ -1,0 +1,15 @@
+{
+  "name": "gh-action-test",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.0.2",
+    "contentful": "^9.2.15",
+    "ncc": "^0.3.6",
+    "nuxt": "^3.0.0"
+  }
+}
