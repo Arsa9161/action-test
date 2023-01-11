@@ -45,7 +45,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "14"
-          cache: manager=npm
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
