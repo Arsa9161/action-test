@@ -2,7 +2,7 @@ name: MyAction
 on:
   push:
     branches:
-      - develop #here we choose to deploy only when a push is detected on the develop branch
+      - main #here we choose to deploy only when a push is detected on the develop branch
 jobs:
   build:
     runs-on: ubuntu-latest
