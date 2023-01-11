@@ -1,8 +1,10 @@
 name: MyAction
+# Only trigger, when the generate workflow succeeded
 on:
-  push:
-    branches:
-      - main #here we choose to deploy only when a push is detected on the develop branch
+  workflow_run:
+    workflows: ["generateAction"]
+    types:
+      - completed
 jobs:
   build:
     runs-on: ubuntu-latest
