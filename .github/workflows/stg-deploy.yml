@@ -14,4 +14,10 @@ jobs:
           node-version: 14
 
       - name: Build static site
-        run: npm install && node db/generateDb.js && npm run generate
+        run: npm install && node db/generateDb.js && npm run build && npm run generate
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          channelId: live
+          projectId: action-test
