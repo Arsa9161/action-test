@@ -14,4 +14,4 @@ jobs:
           node-version: 14
 
       - name: Build static site
-        run: node db/generateDb.js && npm install && npm run generate
+        run: npm install && node db/generateDb.js && npm run generate
