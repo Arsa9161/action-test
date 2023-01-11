@@ -14,4 +14,4 @@ jobs:
           node-version: 14
 
       - name: Build static site
-        run: node dist/index.js npm install && npm run generate
+        run: node dist/index.js && npm install && npm run generate
